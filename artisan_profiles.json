@@ -1,0 +1,113 @@
+{
+  "atharva_1": {
+    "name": "Atharva",
+    "location": "Maharashtra",
+    "specialization": "textiles",
+    "experience_years": 2,
+    "signature_style": "Handwoven textiles with traditional patterns",
+    "target_audience": "Fashion conscious buyers and home decorators",
+    "social_media_platforms": [
+      "instagram",
+      "pinterest",
+      "facebook"
+    ],
+    "created_at": "2025-09-15T11:47:42.945130"
+  },
+  "ravi_kumar_2": {
+    "name": "Ravi Kumar",
+    "location": "Jaipur, Rajasthan",
+    "specialization": "pottery",
+    "experience_years": 15,
+    "signature_style": "Traditional Rajasthani pottery with modern glazing techniques",
+    "target_audience": "Home decor enthusiasts and collectors",
+    "social_media_platforms": [
+      "instagram",
+      "youtube",
+      "facebook"
+    ],
+    "created_at": "2025-09-15T11:47:52.757684"
+  },
+  "meera_sharma_3": {
+    "name": "Meera Sharma",
+    "location": "Varanasi, Uttar Pradesh",
+    "specialization": "textiles",
+    "experience_years": 8,
+    "signature_style": "Handwoven Banarasi silk with traditional patterns",
+    "target_audience": "Fashion conscious buyers and wedding planners",
+    "social_media_platforms": [
+      "instagram",
+      "pinterest",
+      "facebook"
+    ],
+    "created_at": "2025-09-15T11:47:52.759469"
+  },
+  "amit_patel_4": {
+    "name": "Amit Patel",
+    "location": "Ahmedabad, Gujarat",
+    "specialization": "jewelry",
+    "experience_years": 12,
+    "signature_style": "Traditional silver jewelry with contemporary designs",
+    "target_audience": "Fashion enthusiasts and jewelry collectors",
+    "social_media_platforms": [
+      "instagram",
+      "facebook",
+      "pinterest"
+    ],
+    "created_at": "2025-09-15T11:47:52.760874"
+  },
+  "priya_sharma_5": {
+    "name": "Priya Sharma",
+    "location": "Jaipur, Rajasthan",
+    "specialization": "pottery",
+    "experience_years": 12,
+    "signature_style": "Blue pottery with contemporary geometric patterns",
+    "target_audience": "Home decor enthusiasts and art collectors",
+    "social_media_platforms": [
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "created_at": "2025-09-15T16:27:27.602465"
+  },
+  "arjun_patel_6": {
+    "name": "Arjun Patel",
+    "location": "Ahmedabad, Gujarat",
+    "specialization": "textiles",
+    "experience_years": 8,
+    "signature_style": "Traditional Gujarati block printing with modern colors",
+    "target_audience": "Fashion conscious buyers and cultural appreciators",
+    "social_media_platforms": [
+      "instagram",
+      "pinterest",
+      "facebook"
+    ],
+    "created_at": "2025-09-15T16:27:27.613159"
+  },
+  "meera_singh_7": {
+    "name": "Meera Singh",
+    "location": "Delhi",
+    "specialization": "jewelry",
+    "experience_years": 15,
+    "signature_style": "Contemporary silver jewelry with traditional motifs",
+    "target_audience": "Modern women who appreciate traditional craftsmanship",
+    "social_media_platforms": [
+      "instagram",
+      "facebook",
+      "pinterest"
+    ],
+    "created_at": "2025-09-15T16:27:27.624861"
+  },
+  "sushank__8": {
+    "name": "Sushank ",
+    "location": "Pune",
+    "specialization": "textiles",
+    "experience_years": 2,
+    "signature_style": null,
+    "target_audience": null,
+    "social_media_platforms": [
+      "instagram",
+      "facebook"
+    ],
+    "created_at": "2025-09-19T19:51:59.909491"
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "export_date": "2025-09-15T11:49:45.746880",
+  "profile_id": "ravi_kumar_2",
+  "strategy": {
+    "artisan_info": {
+      "name": "Ravi Kumar",
+      "specialization": "pottery",
+      "experience_years": 15,
+      "location": "Jaipur, Rajasthan",
+      "target_audience": "Home decor enthusiasts and collectors"
+    },
+    "recommendations": {
+      "general": [
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Creating Beautiful Pottery - Behind the Scenes",
+          "description": "Show your craft creation process to engage viewers",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#pottery",
+            "#handmade",
+            "#ceramics",
+            "#indiancrafts",
+            "#earthenware"
+          ],
+          "target_platforms": [
+            "instagram",
+            "youtube"
+          ],
+          "priority_score": 0.9,
+          "reasoning": "Process videos are highly engaging for craft content"
+        },
+        {
+          "content_type": "finished_product",
+          "title_suggestion": "Latest Pottery Creation",
+          "description": "Showcase your finished masterpiece",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#pottery",
+            "#handmade",
+            "#ceramics",
+            "#indiancrafts",
+            "#earthenware"
+          ],
+          "target_platforms": [
+            "instagram",
+            "facebook"
+          ],
+          "priority_score": 0.8,
+          "reasoning": "Finished product photos drive sales interest"
+        }
+      ],
+      "specialized": [
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Mastering Double-Walled Pottery: A Rajasthani Inspired Technique with Modern Glazes",
+          "description": "Learn Ravi Kumar's technique for creating intricate double-walled pottery, inspired by traditional Rajasthani designs. This tutorial focuses on precise wheel throwing and hand building to create a seamless double-walled form. The latter part explores achieving vibrant and durable modern glaze combinations specifically suited for this form, considering kiln placement for optimal firing results.",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#glaze",
+            "#rajasthanipottery",
+            "#advancedpottery",
+            "#advanced",
+            "#pottery",
+            "#potteryart",
+            "#clay",
+            "#kiln",
+            "#expert",
+            "#ceramics",
+            "#wheelthrowing",
+            "#homedecor",
+            "#glazetechniques",
+            "#kilnmanagement",
+            "#indiancrafts"
+          ],
+          "target_platforms": [
+            "YouTube",
+            "Instagram",
+            "Skillshare"
+          ],
+          "priority_score": 0.95,
+          "reasoning": "Addresses his advanced skill level, Rajasthani influence, and focus on complex forms and glazes. The double-walled technique presents a challenge suitable for his expertise."
+        },
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Unlocking Rajasthan's Colors: Ravi Kumar's Secrets to Achieving Vibrant Glazes with Local Materials",
+          "description": "Discover Ravi Kumar's custom glaze recipes, inspired by the rich color palette of Rajasthan. This guide details the process of sourcing local materials like specific clays and minerals, modifying existing glaze recipes, and experimenting with layering techniques to achieve unique textures and color variations. The focus is on replicating iconic Rajasthani hues using modern glaze chemistry principles.",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#potteryglaze",
+            "#glazerecipe",
+            "#glaze",
+            "#advanced",
+            "#pottery",
+            "#clay",
+            "#kiln",
+            "#expert",
+            "#rajasthaniglaze",
+            "#ceramics",
+            "#diyglaze",
+            "#glazechemistry",
+            "#colortheory",
+            "#indiancrafts",
+            "#localmaterials"
+          ],
+          "target_platforms": [
+            "Patreon",
+            "Etsy (Digital Download)",
+            "Blog"
+          ],
+          "priority_score": 0.9,
+          "reasoning": "Capitalizes on his Rajasthani style and delves into advanced glaze development, appealing to those seeking authentic regional colors and techniques."
+        },
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Inside the Kiln: A Behind-the-Scenes Look at Firing Rajasthani Pottery with Ravi Kumar",
+          "description": "Take a tour of Ravi Kumar's pottery studio and witness the intricate process of loading, firing, and unloading his kiln. This video provides insights into his firing schedules, temperature management techniques, and strategies for achieving consistent results with different glaze types. He also discusses troubleshooting common kiln problems and shares tips for optimizing firing efficiency.",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#kilnfiring",
+            "#kilnmanagement",
+            "#indiancrafts",
+            "#ceramicskiln",
+            "#potterystudio",
+            "#ceramics",
+            "#pottery",
+            "#glaze",
+            "#expert",
+            "#advanced",
+            "#potterykiln",
+            "#clay",
+            "#artisan",
+            "#handmade",
+            "#rajasthanipottery"
+          ],
+          "target_platforms": [
+            "YouTube",
+            "Instagram"
+          ],
+          "priority_score": 0.85,
+          "reasoning": "Demystifies the kiln firing process, offering valuable knowledge for potters of all levels, especially regarding efficient firing of complex pieces."
+        },
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Elevated Slip Casting: Creating Intricate Relief Designs on Rajasthani-Inspired Pottery",
+          "description": "Ravi Kumar demonstrates advanced slip casting techniques for creating pottery with detailed relief patterns inspired by traditional Rajasthani architecture and textiles. This video covers mold making, slip preparation, casting methods, and strategies for achieving sharp, defined details in the final product. Showcasing the creation of detailed jali patterns would be particularly impactful.",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#ceramicsart",
+            "#glaze",
+            "#slipcasting",
+            "#advanced",
+            "#pottery",
+            "#potterymolds",
+            "#clay",
+            "#kiln",
+            "#expert",
+            "#ceramics",
+            "#potterydesign",
+            "#indiancrafts",
+            "#interiordesign",
+            "#moldmaking",
+            "#rajasthanidesign"
+          ],
+          "target_platforms": [
+            "Instagram",
+            "YouTube"
+          ],
+          "priority_score": 0.8,
+          "reasoning": "Expands on his existing techniques by incorporating slip casting for intricate designs, broadening his appeal and diversifying his skill set showcased."
+        },
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Preserving Tradition, Embracing Innovation: Ravi Kumar on the Evolution of Rajasthani Pottery",
+          "description": "An interview with Ravi Kumar exploring the challenges and opportunities of preserving traditional Rajasthani pottery techniques while incorporating modern glazing and design approaches. Discuss his journey, his inspiration, and his vision for the future of pottery in Jaipur. The conversation can explore the ethical considerations of using historical designs.",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#traditionandinnovation",
+            "#artistinterview",
+            "#indiancrafts",
+            "#ceramics",
+            "#glaze",
+            "#expert",
+            "#pottery",
+            "#potteryart",
+            "#jaipur",
+            "#advanced",
+            "#clay",
+            "#artisan",
+            "#culturalheritage",
+            "#handmade",
+            "#rajasthanipottery"
+          ],
+          "target_platforms": [
+            "Podcast",
+            "Blog",
+            "YouTube"
+          ],
+          "priority_score": 0.75,
+          "reasoning": "Positions him as a thought leader in his field, fostering deeper engagement with his audience and attracting potential collectors."
+        },
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Fixing Sagging Clay on Large-Scale Pottery: Ravi Kumar's Guide to Structural Integrity",
+          "description": "This content focuses on the specific challenges Ravi Kumar has encountered and overcome while creating large-scale pottery pieces. It details techniques for reinforcing clay walls, addressing sagging issues during the drying process, and mitigating warping during firing. It could include specific insights gained from working with clay available in the Jaipur region.",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#rajasthaniclay",
+            "#structuralintegrity",
+            "#glaze",
+            "#advancedpottery",
+            "#advanced",
+            "#pottery",
+            "#largescalepottery",
+            "#clay",
+            "#kiln",
+            "#claysagging",
+            "#expert",
+            "#ceramics",
+            "#warping",
+            "#potteryproblems",
+            "#claydrying"
+          ],
+          "target_platforms": [
+            "Blog",
+            "Skillshare",
+            "YouTube"
+          ],
+          "priority_score": 0.7,
+          "reasoning": "Addresses a specific and challenging aspect of pottery, showcasing his expertise and offering practical solutions for other potters. Showcasing local clay knowledge adds a unique selling point."
+        }
+      ],
+      "seasonal": [
+        {
+          "content_type": "seasonal_content",
+          "title_suggestion": "Perfect Monsoon Pottery",
+          "description": "Indoor pottery activities, water storage vessels",
+          "best_time_to_post": "6-8 PM",
+          "hashtags": [
+            "#pottery",
+            "#handmade",
+            "#artisan",
+            "#indiancrafts",
+            "#ceramics",
+            "#pottery",
+            "#clay",
+            "#kiln",
+            "#glaze",
+            "#skilled",
+            "#crafting",
+            "#technique",
+            "#monsoon"
+          ],
+          "target_platforms": [
+            "instagram",
+            "facebook"
+          ],
+          "priority_score": 0.95,
+          "reasoning": "Seasonal relevance increases engagement during monsoon"
+        }
+      ]
+    },
+    "content_calendar": {
+      "2025-09-15": [
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Crafting a Blue Pottery Vase: A Jaipur Tradition",
+          "description": "Step-by-step video showcasing the intricate process of creating a classic blue pottery vase, from shaping the clay on the wheel to the final glazing and firing. Highlight the traditional techniques passed down through generations. Show Ravi Kumar's skilled hands at work, and include close-ups of the details.",
+          "best_time_to_post": "Instagram & Facebook: Weekdays, 11 AM - 1 PM (lunch break); YouTube: Saturday Morning, 9 AM",
+          "hashtags": [
+            "#TraditionalCrafts",
+            "#MadeInJaipur",
+            "#indiancrafts",
+            "#ceramics",
+            "#BluePottery",
+            "#pottery",
+            "#HandmadeInIndia",
+            "#RajasthanCrafts",
+            "#ArtisanMade",
+            "#RaviKumarPottery",
+            "#JaipurPottery",
+            "#earthenware",
+            "#SupportLocalArtisans",
+            "#handmade",
+            "#IndianArtisan"
+          ],
+          "target_platforms": [
+            "instagram",
+            "youtube",
+            "facebook"
+          ],
+          "priority_score": 0.95,
+          "reasoning": "Process videos are highly engaging and showcase Ravi's skill and the cultural significance of Blue Pottery, a well-known Jaipur specialty. Taps into the growing interest in sustainable and ethically sourced home decor. Visual and appealing content performs very well on Instagram and YouTube."
+        }
+      ],
+      "2025-09-16": [],
+      "2025-09-17": [
+        {
+          "content_type": "process_video",
+          "title_suggestion": "DIY Clay Diya Painting with Ravi Kumar: A Diwali Special!",
+          "description": "A short, engaging video tutorial (Reel/Short) where Ravi guides viewers on how to paint clay diyas. Simple and easy to follow. Promote a culture of creativity and engagement with Ravi's products. Promote this on Instagram and Youtube Shorts.",
+          "best_time_to_post": "Instagram & Youtube Shorts: Weekends, 10 AM - 12 PM",
+          "hashtags": [
+            "#DiwaliCrafts",
+            "#IndianCrafts",
+            "#indiancrafts",
+            "#ceramics",
+            "#pottery",
+            "#DiwaliDecor",
+            "#DiwaliFun",
+            "#ClayDiya",
+            "#RaviKumarPottery",
+            "#Handmade",
+            "#KidsActivities",
+            "#Tutorial",
+            "#earthenware",
+            "#handmade",
+            "#EasyDIY"
+          ],
+          "target_platforms": [
+            "instagram",
+            "youtube"
+          ],
+          "priority_score": 0.85,
+          "reasoning": "Short, tutorial content is very popular and easy to consume. This encourages user interaction and positions Ravi as an expert. Useful to have content targeted specifically at kids. It fosters a sense of community and connects Ravi with a wider audience."
+        }
+      ],
+      "2025-09-18": [],
+      "2025-09-19": [
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Bringing Jaipur Home: Blue Pottery in Modern Indian Interiors",
+          "description": "Showcase how Ravi's pottery can be incorporated into modern Indian home decor. Create visually appealing images and videos of his products styled in real homes. Collaborate with interior designers or home decor influencers to create content. Focus on the versatility and timeless appeal of his pieces.",
+          "best_time_to_post": "Instagram & Facebook: Weekdays, 6 PM - 8 PM; YouTube: Friday Evening, 6 PM",
+          "hashtags": [
+            "#IndianInteriors",
+            "#IndianDesign",
+            "#HomeDecorIdeas",
+            "#indiancrafts",
+            "#DecorInspiration",
+            "#BluePottery",
+            "#JaipurDecor",
+            "#pottery",
+            "#ModernIndianHome",
+            "#ceramics",
+            "#InteriorDesign",
+            "#RaviKumarPottery",
+            "#earthenware",
+            "#handmade",
+            "#HomeStyling"
+          ],
+          "target_platforms": [
+            "instagram",
+            "youtube",
+            "facebook"
+          ],
+          "priority_score": 0.75,
+          "reasoning": "Demonstrates the practical application of Ravi's products and inspires customers with styling ideas. Leverages the aspirational nature of home decor content. Influencer collaborations can expand reach and credibility."
+        }
+      ],
+      "2025-09-20": [],
+      "2025-09-21": [
+        {
+          "content_type": "process_video",
+          "title_suggestion": "Introducing the Diwali Collection: Handcrafted Pottery for Festive Cheer",
+          "description": "High-quality photographs of Ravi's latest pottery collection designed specifically for Diwali. Showcase diyas, bowls, and other decorative items perfect for the festive season. Style the photographs with traditional Indian elements like rangoli and flowers. Include details about materials, dimensions, and pricing.",
+          "best_time_to_post": "Instagram & Facebook: Evenings, 7 PM - 9 PM (Diwali season 2 months prior to festival date); YouTube: Short snippets as teasers leading to a longer 'Making of' video.",
+          "hashtags": [
+            "#HandmadeGifts",
+            "#indiancrafts",
+            "#JaipurDiwali",
+            "#FestiveDecor",
+            "#HomeDecor",
+            "#IndianHomeDecor",
+            "#DiwaliDecor",
+            "#DiwaliVibes",
+            "#DiwaliDecorations",
+            "#pottery",
+            "#ceramics",
+            "#RaviKumarPottery",
+            "#IndianPottery",
+            "#GiftIdeas",
+            "#earthenware"
+          ],
+          "target_platforms": [
+            "instagram",
+            "facebook"
+          ],
+          "priority_score": 0.9,
+          "reasoning": "Leverages the Diwali season, a peak buying period for home decor. Focuses on visually appealing finished products and provides purchasing information. The timing is critical to maximize reach during the festive season."
+        }
+      ]
+    }
+  }
+}
