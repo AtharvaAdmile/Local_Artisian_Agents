@@ -166,6 +166,8 @@ recommendations_*.json
 # Docker
 .dockerignore
 
+/exclude
+
 # Render deployment files (keep these)
 # render.yaml - KEEP
 # Dockerfile - KEEP
