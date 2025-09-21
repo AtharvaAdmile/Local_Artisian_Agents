@@ -1,0 +1,186 @@
+# A2A AI Agent - FastAPI Project .gitignore
+
+# Environment Variables (CRITICAL - Never commit API keys!)
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.conda/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# Data Files (Generated at Runtime)
+artisan_profiles.json
+profiles_backup_*.json
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+log/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Google Cloud Credentials (CRITICAL - Never commit!)
+service-account-key.json
+*-service-account.json
+google-credentials.json
+gcp-key.json
+*.pem
+*.p12
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Image Uploads (Runtime Generated)
+uploads/
+images/
+craft_images/
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Documentation Build
+docs/_build/
+site/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs
+/site
+
+# Pycharm
+.idea/
+
+# Local development files
+local_test.py
+test_local.py
+debug.py
+scratch.py
+
+# Runtime generated content
+content_calendar_*.json
+analysis_results_*.json
+recommendations_*.json
+
+# Docker
+.dockerignore
+
+# Render deployment files (keep these)
+# render.yaml - KEEP
+# Dockerfile - KEEP
+# requirements.txt - KEEP
+
+# Keep these essential files for deployment:
+# main.py
+# artisan_ai_agent.py
+# profile_manager.py
+# gcs_image_analyzer.py
+# content_strategist.py
+# specialized_recommendations.py
+# start_dev.py
+# test_api.py
+# frontend_example.html
+# DEPLOYMENT_GUIDE.md
+# README.md
+# .env.example

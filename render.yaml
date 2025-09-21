@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: a2a-ai-agent-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 8000
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: GOOGLE_CLOUD_PROJECT_ID
+        sync: false
+      - key: GCS_BUCKET_NAME
+        sync: false
+      - key: GOOGLE_CLOUD_LOCATION
+        value: us-central1
+    healthCheckPath: /health

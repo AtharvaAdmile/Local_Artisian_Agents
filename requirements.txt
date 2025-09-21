@@ -1,4 +1,9 @@
-# A2A AI Agent for Local Artisans - Requirements
+# A2A AI Agent for Local Artisans - FastAPI Requirements
+
+# FastAPI and web server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
 
 # Core AI and Google services
 google-generativeai>=0.8.0
@@ -6,16 +11,11 @@ google-cloud-aiplatform>=1.40.0
 google-cloud-storage>=2.10.0
 vertexai>=1.40.0
 
-# Streamlit web application
-streamlit>=1.30.0
-streamlit-option-menu>=0.3.6
-plotly>=5.17.0
-pandas>=2.0.0
-
 # Environment and configuration
 python-dotenv>=1.0.0
 
-# Data handling
+# Data handling and validation
+pydantic>=2.5.0
 dataclasses-json>=0.6.0
 
 # Image processing
@@ -23,7 +23,6 @@ Pillow>=10.0.0
 
 # Additional utilities
 uuid>=1.30
-logging>=0.4.9.6
 
 # Development and testing (optional)
 # pytest>=7.0.0

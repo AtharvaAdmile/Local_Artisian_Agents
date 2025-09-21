@@ -1,8 +1,8 @@
-# A2A AI Agent for Local Artisans in India
+# A2A AI Agent - Artisan Content Strategist API
 
-## Content Strategist and Management System
+## FastAPI-based Content Strategy System for Local Artisans in India
 
-This AI agent helps local artisans in India by providing intelligent content strategy recommendations and craft analysis capabilities.
+This AI-powered API helps local artisans in India create engaging social media content and grow their businesses through intelligent content strategy recommendations and craft analysis capabilities. Optimized for deployment on Render and frontend integration.
 
 ### Features
 
@@ -13,12 +13,12 @@ This AI agent helps local artisans in India by providing intelligent content str
 - Real-time confidence scoring and detailed craft insights
 - Cultural context recognition for Indian crafts
 
-📱 **Streamlit Web Application**
-- Modern, responsive web interface
-- Real-time dashboard with statistics
-- Interactive profile management
-- Drag-and-drop image uploads
-- Visual content recommendations display
+🚀 **FastAPI RESTful API**
+- High-performance async API with automatic documentation
+- Interactive Swagger UI at `/docs`
+- CORS-enabled for frontend integration
+- Health checks and monitoring endpoints
+- Optimized for cloud deployment (Render, Heroku, etc.)
 
 📋 **Content Strategy Recommendations**
 - Personalized content suggestions based on artisan specialization
@@ -98,60 +98,118 @@ gcloud services enable storage.googleapis.com
 
 #### 5. Run the Application
 
-**Option A: Streamlit Web Application (Recommended)**
+**Option A: Development Server (Recommended)**
 ```bash
-python run_streamlit.py
-```
-Or directly:
-```bash
-streamlit run streamlit_app.py
+python start_dev.py
 ```
 
-**Option B: Command Line Interface**
+**Option B: Direct FastAPI**
 ```bash
-python main_application.py
+python main.py
 ```
 
-**Option C: Demo Script**
+**Option C: With Uvicorn**
 ```bash
-python demo.py
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+**Option D: Docker**
+```bash
+docker build -t a2a-ai-agent .
+docker run -p 8000:8000 --env-file .env a2a-ai-agent
+```
+
+## 📋 API Endpoints
+
+### Core Endpoints
+- `GET /` - API information
+- `GET /health` - Health check for monitoring
+- `GET /docs` - Interactive API documentation (Swagger UI)
+
+### Profile Management
+- `POST /api/profiles` - Create artisan profile
+- `GET /api/profiles` - List all profiles
+- `GET /api/profiles/{profile_id}` - Get specific profile
+- `DELETE /api/profiles/{profile_id}` - Delete profile
+
+### Content Strategy
+- `GET /api/content-strategy/{profile_id}` - Generate content strategy
+- `GET /api/specialized-recommendations/{profile_id}` - Get specialized recommendations
+- `GET /api/seasonal-recommendations/{profile_id}` - Get seasonal content ideas
+- `GET /api/content-calendar/{profile_id}` - Generate content calendar
+
+### Image Analysis
+- `POST /api/analyze-image/{profile_id}` - Analyze craft image with AI
+
+### Utilities
+- `GET /api/craft-types` - Available craft specializations
+- `GET /api/dashboard` - Dashboard overview data
+- `GET /api/statistics` - System statistics
+
+## 🌐 Deployment on Render
+
+### Quick Deploy
+1. Fork this repository
+2. Connect to Render.com
+3. The `render.yaml` file will automatically configure the service
+4. Set environment variables in Render dashboard
+5. Deploy!
+
+### Environment Variables for Render
+```bash
+GOOGLE_API_KEY=your_google_api_key
+GOOGLE_CLOUD_PROJECT_ID=your_gcp_project_id
+GCS_BUCKET_NAME=your_storage_bucket_name
+GOOGLE_CLOUD_LOCATION=us-central1
 ```
 
 ### Usage
 
-#### Creating an Artisan Profile
-```python
-from main_application import ArtisanContentManager
-
-app = ArtisanContentManager()
-
-profile_id = app.create_artisan_profile(
-    name="Ravi Kumar",
-    location="Jaipur, Rajasthan",
-    specialization="pottery",
-    experience_years=15,
-    target_audience="Home decor enthusiasts",
-    social_media_platforms=["instagram", "youtube"]
-)
+#### Creating an Artisan Profile via API
+```javascript
+// Create profile via API
+const createProfile = async (profileData) => {
+  const response = await fetch('/api/profiles', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: "Ravi Kumar",
+      location: "Jaipur, Rajasthan",
+      specialization: "pottery",
+      experience_years: 15,
+      target_audience: "Home decor enthusiasts",
+      social_media_platforms: ["instagram", "youtube"]
+    })
+  });
+  return response.json();
+};
 ```
 
-#### Analyzing Craft Images
-```python
-# Analyze a craft image and get content recommendations
-result = app.analyze_craft_image(profile_id, "pottery_image.jpg")
-
-print(f"Detected craft: {result['analysis']['craft_type']}")
-print(f"Complexity: {result['analysis']['complexity_level']}")
-print(f"Colors: {result['analysis']['colors']}")
+#### Analyzing Craft Images via API
+```javascript
+// Analyze image via API
+const analyzeImage = async (profileId, imageFile) => {
+  const formData = new FormData();
+  formData.append('file', imageFile);
+  
+  const response = await fetch(`/api/analyze-image/${profileId}`, {
+    method: 'POST',
+    body: formData
+  });
+  return response.json();
+};
 ```
 
-#### Getting Content Strategy
-```python
-# Get comprehensive content strategy
-strategy = app.get_content_strategy(profile_id)
-
-print(f"General recommendations: {len(strategy['recommendations']['general'])}")
-print(f"Specialized recommendations: {len(strategy['recommendations']['specialized'])}")
+#### Getting Content Strategy via API
+```javascript
+// Get content strategy via API
+const getContentStrategy = async (profileId) => {
+  const response = await fetch(`/api/content-strategy/${profileId}`);
+  const data = await response.json();
+  
+  console.log(`Recommendations: ${data.recommendations.length}`);
+  return data;
+};
 ```
 
 ### API Structure
@@ -185,17 +243,40 @@ The system uses environment variables for configuration:
 - `GOOGLE_API_KEY` - Google Generative AI API key for image analysis and content generation
 - `GOOGLE_GENAI_USE_VERTEXAI` - Optional: Use Vertex AI instead of AI Studio
 
+## 🧪 Testing
+
+```bash
+# Run API tests
+python test_api.py
+
+# Test with custom URL
+python test_api.py https://your-api-url.com
+
+# Run with development server
+python start_dev.py --test
+```
+
+## 💻 Frontend Integration
+
+Check out `frontend_example.html` for a complete frontend integration example.
+
 ### File Structure
 
 ```
-├── main_application.py          # Main application interface
+├── main.py                     # FastAPI application
 ├── artisan_ai_agent.py         # Core data models and base agent
 ├── profile_manager.py          # Artisan profile management
-├── image_analyzer.py           # AI-powered craft image analysis
+├── gcs_image_analyzer.py       # AI-powered craft image analysis
 ├── content_strategist.py       # Content strategy engine
 ├── specialized_recommendations.py # Craft-specific recommendations
 ├── requirements.txt            # Python dependencies
-├── .env                       # Environment variables
+├── render.yaml                 # Render deployment config
+├── Dockerfile                  # Docker configuration
+├── start_dev.py               # Development server script
+├── test_api.py                # API testing script
+├── frontend_example.html      # Frontend integration example
+├── DEPLOYMENT_GUIDE.md        # Detailed deployment guide
+├── .env.example               # Environment variables template
 └── README.md                  # This file
 ```
 
@@ -233,13 +314,34 @@ The system uses environment variables for configuration:
 }
 ```
 
+## 📚 Documentation
+
+- **Interactive API Docs**: Visit `/docs` when running the server
+- **Deployment Guide**: See `DEPLOYMENT_GUIDE.md` for detailed instructions
+- **Frontend Example**: Open `frontend_example.html` for integration examples
+- **Testing**: Use `test_api.py` for comprehensive API testing
+
+## 🚀 Quick Start Commands
+
+```bash
+# Development setup
+python start_dev.py --install    # Install dependencies
+python start_dev.py              # Start development server
+python start_dev.py --test       # Run tests
+
+# Production deployment
+docker build -t a2a-ai-agent .   # Build Docker image
+docker run -p 8000:8000 a2a-ai-agent  # Run container
+```
+
 ### Future Enhancements
 
-- **Web Interface** - Browser-based user interface
+- **Database Integration** - PostgreSQL for production scaling
+- **Authentication** - User authentication and API keys
 - **Social Media Integration** - Direct posting to platforms
 - **Performance Analytics** - Track content engagement
 - **Multi-language Support** - Regional language support
-- **Mobile App** - Smartphone application
+- **Mobile App** - React Native or Flutter app
 - **Marketplace Integration** - E-commerce platform connections
 
 ### Support
