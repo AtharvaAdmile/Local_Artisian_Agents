@@ -58,10 +58,30 @@ async def startup_event():
     try:
         logger.info("Initializing A2A AI Agent system...")
         profile_manager = ProfileManager()
-        image_analyzer = GCSCraftImageAnalyzer()
-        content_strategist = ContentStrategist()
-        specialized_engine = SpecializedRecommendationEngine()
-        logger.info("✅ System initialized successfully!")
+        
+        # Try to initialize AI components, but continue if they fail
+        try:
+            image_analyzer = GCSCraftImageAnalyzer()
+            logger.info("✅ Image analyzer initialized")
+        except Exception as e:
+            logger.warning(f"⚠️ Image analyzer failed to initialize: {e}")
+            image_analyzer = None
+        
+        try:
+            content_strategist = ContentStrategist()
+            logger.info("✅ Content strategist initialized")
+        except Exception as e:
+            logger.warning(f"⚠️ Content strategist failed to initialize: {e}")
+            content_strategist = None
+        
+        try:
+            specialized_engine = SpecializedRecommendationEngine()
+            logger.info("✅ Specialized engine initialized")
+        except Exception as e:
+            logger.warning(f"⚠️ Specialized engine failed to initialize: {e}")
+            specialized_engine = None
+        
+        logger.info("✅ System initialized (some components may be unavailable without proper credentials)")
     except Exception as e:
         logger.error(f"❌ Failed to initialize system: {e}")
         raise
@@ -215,10 +235,13 @@ async def delete_profile(profile_id: str):
         raise HTTPException(status_code=500, detail=str(e))
 
 # Image analysis endpoints
-@app.post("/api/analyze-image/{profile_id}", response_model=ImageAnalysisResponse)
+@app.post("/api/analyze-image/{profile_id}")
 async def analyze_image(profile_id: str, file: UploadFile = File(...)):
     """Analyze craft image and get recommendations"""
     try:
+        if not image_analyzer:
+            raise HTTPException(status_code=503, detail="Image analysis service unavailable - missing Google Cloud credentials")
+        
         # Validate profile exists
         profile = profile_manager.get_profile(profile_id)
         if not profile:
@@ -244,6 +267,9 @@ async def analyze_image(profile_id: str, file: UploadFile = File(...)):
 async def generate_content_strategy(profile_id: str):
     """Generate content strategy for artisan"""
     try:
+        if not content_strategist:
+            raise HTTPException(status_code=503, detail="Content strategy service unavailable - missing Google API credentials")
+        
         profile = profile_manager.get_profile(profile_id)
         if not profile:
             raise HTTPException(status_code=404, detail="Profile not found")
@@ -277,6 +303,9 @@ async def generate_content_strategy(profile_id: str):
 async def get_specialized_recommendations(profile_id: str):
     """Get specialized recommendations for artisan"""
     try:
+        if not specialized_engine:
+            raise HTTPException(status_code=503, detail="Specialized recommendations service unavailable - missing Google API credentials")
+        
         profile = profile_manager.get_profile(profile_id)
         if not profile:
             raise HTTPException(status_code=404, detail="Profile not found")
@@ -310,6 +339,9 @@ async def get_specialized_recommendations(profile_id: str):
 async def get_seasonal_recommendations(profile_id: str, season: Optional[str] = None):
     """Get seasonal content recommendations"""
     try:
+        if not specialized_engine:
+            raise HTTPException(status_code=503, detail="Seasonal recommendations service unavailable - missing Google API credentials")
+        
         profile = profile_manager.get_profile(profile_id)
         if not profile:
             raise HTTPException(status_code=404, detail="Profile not found")
@@ -343,6 +375,9 @@ async def get_seasonal_recommendations(profile_id: str, season: Optional[str] = 
 async def generate_content_calendar(profile_id: str, days: int = 30):
     """Generate content calendar for artisan"""
     try:
+        if not content_strategist:
+            raise HTTPException(status_code=503, detail="Content calendar service unavailable - missing Google API credentials")
+        
         profile = profile_manager.get_profile(profile_id)
         if not profile:
             raise HTTPException(status_code=404, detail="Profile not found")

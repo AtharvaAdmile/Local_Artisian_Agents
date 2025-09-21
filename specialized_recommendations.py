@@ -5,8 +5,7 @@ Provides targeted recommendations based on specific craft specializations
 
 import os
 from dotenv import load_dotenv
-from google import genai
-from google.genai.types import HttpOptions
+import google.generativeai as genai
 from typing import Dict, List, Optional, Tuple
 import json
 import logging
@@ -26,10 +25,7 @@ class SpecializedRecommendationEngine:
         if not self.api_key:
             raise ValueError("GOOGLE_API_KEY not found in environment variables")
         
-        self.client = genai.Client(
-            api_key=self.api_key, 
-            http_options=HttpOptions(api_version="v1")
-        )
+        genai.configure(api_key=self.api_key)
         
         # Specialized knowledge base for different craft types
         self.craft_specializations = {
@@ -138,10 +134,8 @@ class SpecializedRecommendationEngine:
             Focus on {skill_level}-level content that showcases {artisan.specialization.value} expertise.
             """
             
-            response = self.client.models.generate_content(
-                model="gemini-2.0-flash-exp",
-                contents=prompt
-            )
+            model = genai.GenerativeModel("gemini-1.5-flash")
+            response = model.generate_content(prompt)
             
             # Parse and enhance recommendations
             recommendations = self._parse_specialized_recommendations(response.text, artisan, craft_info, skill_level)

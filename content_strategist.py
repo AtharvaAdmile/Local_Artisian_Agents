@@ -5,8 +5,7 @@ Provides personalized content strategies for artisans based on their specializat
 
 import os
 from dotenv import load_dotenv
-from google import genai
-from google.genai.types import HttpOptions
+import google.generativeai as genai
 from typing import Dict, List, Optional
 import json
 import logging
@@ -26,10 +25,7 @@ class ContentStrategist:
         if not self.api_key:
             raise ValueError("GOOGLE_API_KEY not found in environment variables")
         
-        self.client = genai.Client(
-            api_key=self.api_key, 
-            http_options=HttpOptions(api_version="v1")
-        )
+        genai.configure(api_key=self.api_key)
         
         # Content strategy knowledge base for Indian artisans
         self.content_strategies = {
@@ -141,10 +137,8 @@ class ContentStrategist:
             Focus on Indian market, cultural relevance, and platform-specific strategies.
             """
             
-            response = self.client.models.generate_content(
-                model="gemini-2.0-flash-exp",
-                contents=strategy_prompt
-            )
+            model = genai.GenerativeModel("gemini-1.5-flash")
+            response = model.generate_content(strategy_prompt)
             
             # Parse recommendations
             recommendations = self._parse_content_recommendations(response.text)
